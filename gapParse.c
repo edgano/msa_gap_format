@@ -5,18 +5,20 @@
 #include <ctype.h>
 
 bool gaps;
+char gap = '-';
 
-void convert_final_digit(){
-
+void convert_final_digit(int digit){
+    int i;
+    for( i = 0; i < digit; i = i + 1 ){
+        printf("%c", gap);
+    }
 }
 void convertGaps (char *line){
     char *c;
-    char gap = '-';
-    int numberGap=0;
     char nn; 
-
+    int numberGap=0;
+    
     for (c=line; *c; c++) {
-
         nn = *c;
         if (nn == gap)  {            // gap found
             numberGap++;
@@ -34,33 +36,36 @@ void convertGaps (char *line){
 }
 void convertFasta (char *line){
     char *c;
-    int numberGap=0;
     char nn; 
     int check=0;
-    int auxDigit=0;
-    char *aux;
+    int auxDigit;
 
     for (c=line; *c; c++) {
-
         nn = *c;
-        //printf("** what we have: %c\n",nn);
-
-        if (!isdigit(nn)){  //it's a nucleotide
-            printf("nucleotide: %c\n",nn);
-            if (check==0){  //digit already covnerted
-                //printf("%c",nn);    //print nn
-            }else{          //first time to nucelotide after digit
-                //printf("auxDigit: : : %i",auxDigit);
-                convert_final_digit();
-                check=0;
-                //printf("%c",nn);
+        if (!isdigit(nn) || check==1){  //it's a nucleotide or non the first digit
+            if(isdigit(nn)){
+                //second or more digits in a row
+                //nothing to do... it's already captured in the ATOI()
+            }else{
+                if (check==0){  //digit already covnerted
+                //printf("nucleotide: %c\n",nn);
+                printf("%c",nn);
+                }else{          //first time to nucelotide after digit
+                    //printf("auxDigit: : : %i",auxDigit);
+                    convert_final_digit(auxDigit);
+                    check=0;
+                    //printf("total gaps: %d \nfirst neuclotide %c\n", auxDigit,nn);
+                    printf("%c",nn);
+                }
             }
-        }else{              //its a digit
-            printf(">> number: %c\n",nn);
-            //TODO -> append nn
-            //auxDigit= atoi(aux);  //apend digit to gapNumber
-            printf("<< digit %s",aux);
-            check=1;        //need to convert auxDigit to int
+        }else{              //its the FIRST digit
+            //it graps all the digirs in teh auxDigit 
+            //but the pointer in the char* not... it will
+            //go in the if bellow with CHECK==1...
+            auxDigit= atoi(c);
+            //printf("<< digit %d\n",auxDigit);
+            check=1;
+            //TODO -> check if its just 0 --> ERROR
         }   
     }
 }
@@ -85,7 +90,7 @@ void readFasta(char *fileName){
             if (state == 1){
                 //printf("\n");
             }
-            printf("%s: \n", line+1);
+            printf(">%s: \n", line+1);
             state = 1;
         } else {
             /* Print everything else */
@@ -98,7 +103,6 @@ void readFasta(char *fileName){
             //printf("%s\n", line);
         }
     }
- 
     fclose(fp);
     if (line)
         free(line);
@@ -113,8 +117,6 @@ void convert2Gap(char *filename){
     gaps = true;
     readFasta(filename);
 }
-
-
 
 int main(){
     printf("## FASTA TO GAP ##\n\n");
