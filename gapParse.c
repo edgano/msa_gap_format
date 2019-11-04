@@ -4,17 +4,41 @@
 #include <stdbool.h>
 #include <ctype.h>
 
+char * inputFasta = "test.fa";
+char * outputFileFA2Gap = "resultF2G.gap";
+char * outputFileGap2FA = "resultG2F.fa";
+FILE *outFileFa2Gap;
+FILE *outFileGap2Fa;
 bool gaps;
 char gap = '-';
 
+int writeChar2File(FILE *outFile, char char2write){
+    int i;
+    if (outFile != NULL) {
+       fputc (char2write, outFile);		
+   }
+   else {
+  	  printf("\n Unable to Create or Open the Sample.txt File");
+   }
+   return 0;
+}
+void printString(FILE * filePoint, char *string2print){
+    int len = strlen(string2print);
+    int i;
+    
+    for (i = 0; i < len; i++) {
+        writeChar2File(filePoint,string2print[i]);
+	}
+}
 void convert_final_digit(int digit){
     int i;
     for( i = 0; i < digit; i = i + 1 ){
-        printf("%c", gap);
+        writeChar2File(outFileGap2Fa,gap);
     }
 }
 void convertGaps (char *line){
     char *c;
+    char aux[100];  //number of digits for gaps... posibility of ERROR
     char nn; 
     int numberGap=0;
     
@@ -25,12 +49,16 @@ void convertGaps (char *line){
         }else{            
             if (numberGap!=0){      // 1st non-gap after gap
                 //print number of gaps
-                printf("%d", numberGap);
+                //****printf("%d", numberGap);
+                sprintf(aux, "%d", numberGap);  //convert int to char*
+                printString(outFileFa2Gap,aux);
                 //reset counter
                 numberGap=0;
             }
             //print nucleotide
-            printf("%c", nn);
+            //****printf("%c", nn);
+            writeChar2File(outFileFa2Gap,nn);
+
         }
     }
 }
@@ -49,13 +77,15 @@ void convertFasta (char *line){
             }else{
                 if (check==0){  //digit already covnerted
                 //printf("nucleotide: %c\n",nn);
-                printf("%c",nn);
+                //****printf("%c",nn);
+                writeChar2File(outFileGap2Fa,nn);
                 }else{          //first time to nucelotide after digit
                     //printf("auxDigit: : : %i",auxDigit);
                     convert_final_digit(auxDigit);
                     check=0;
                     //printf("total gaps: %d \nfirst neuclotide %c\n", auxDigit,nn);
-                    printf("%c",nn);
+                    //****printf("%c",nn);
+                    writeChar2File(outFileGap2Fa,nn);
                 }
             }
         }else{              //its the FIRST digit
@@ -69,7 +99,6 @@ void convertFasta (char *line){
         }   
     }
 }
-
 void readFasta(char *fileName){
     FILE * fp;
     char * line = NULL;
@@ -90,25 +119,32 @@ void readFasta(char *fileName){
             if (state == 1){
                 //printf("\n");
             }
-            printf(">%s: \n", line+1);
+            //****printf(">%s: \n", line+1);
+            if (gaps){  //choose wich is the output file
+                printString(outFileFa2Gap,">");
+                printString(outFileFa2Gap,line+1);
+                printString(outFileFa2Gap,"\n");
+            }else{
+                printString(outFileGap2Fa,">");
+                printString(outFileGap2Fa,line+1);
+                printString(outFileGap2Fa,"\n");
+            }
             state = 1;
         } else {
             /* Print everything else */
             if (gaps){  //fasta >> gaps
                 convertGaps(line);
+                printString(outFileFa2Gap,"\n");
             }else {     // gaps >> fasta
                 convertFasta(line);
+                printString(outFileGap2Fa,"\n");
             }
-            printf("\n");
-            //printf("%s\n", line);
         }
     }
     fclose(fp);
     if (line)
         free(line);
-    //exit(EXIT_SUCCESS);
 }
-
 void convert2Fasta(char *filename){
     gaps = false;
     readFasta(filename);
@@ -117,15 +153,27 @@ void convert2Gap(char *filename){
     gaps = true;
     readFasta(filename);
 }
-
+FILE *openResultFile(char *fileName){
+    FILE *fileAddress = fopen(fileName, "w");
+    return fileAddress;
+}
+int closeResultFile(FILE *outFile){
+    // printf("\nWe have written the file successfully\n");
+	fclose(outFile);	
+}
 int main(){
-    printf("## FASTA TO GAP ##\n\n");
-    convert2Gap("test.fa");
 
-    printf("\n## GAP TO FASTA ##\n\n");
-    convert2Fasta("test.gap");
+    //open result files
+    outFileFa2Gap = openResultFile(outputFileFA2Gap);
+    outFileGap2Fa = openResultFile(outputFileGap2FA);
 
-    printf("## ## ## ## ##\n\n");
+    printf("## FASTA TO GAP ##\n    Input file: %s\n    Output file: %s\n",inputFasta,outputFileFA2Gap);
+    convert2Gap(inputFasta);
+    closeResultFile(outFileFa2Gap);
+
+    printf("\n## GAP TO FASTA ##\n    Input file: %s\n    Output file: %s\n",outputFileFA2Gap,outputFileGap2FA);
+    convert2Fasta(outputFileFA2Gap);
+    closeResultFile(outFileGap2Fa);
 
     return 0;
 }
