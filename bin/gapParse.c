@@ -4,7 +4,7 @@
 #include <stdbool.h>
 #include <ctype.h>
 
-char * inputFasta = "test.fa";
+char * inputFasta; //= "test.fa";
 char * outputFileFA2Gap = "resultF2G.gap";
 char * outputFileGap2FA = "resultG2F.fa";
 FILE *outFileFa2Gap;
@@ -180,12 +180,13 @@ int closeResultFile(FILE *outFile){
     // printf("\nWe have written the file successfully\n");
 	fclose(outFile);	
 }
-int main(){
+int main(int argc, char* argv []){
 
     //open result files
     outFileFa2Gap = openResultFile(outputFileFA2Gap);
     outFileGap2Fa = openResultFile(outputFileGap2FA);
 
+    inputFasta=argv[1];
     printf("## FASTA TO GAP ##\n    Input file: %s\n    Output file: %s\n",inputFasta,outputFileFA2Gap);
     convert2Gap(inputFasta);
     closeResultFile(outFileFa2Gap);
