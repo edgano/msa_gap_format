@@ -15,17 +15,19 @@ char gap = '-';
 int writeChar2File(FILE *outFile, char char2write){
     int i;
     if (outFile != NULL) {
-       fputc (char2write, outFile);		
+        //printf ("printChar: %c \n", char2write);
+        fputc (char2write, outFile);		
+        //printf("done printChar\n");
    }
    else {
   	  printf("\n Unable to Create or Open the Sample.txt File");
    }
    return 0;
 }
-void printString(FILE * filePoint, char *string2print){
+void printString(FILE *filePoint, char *string2print){
     int len = strlen(string2print);
     int i;
-    
+    //printf ("printString: %s \n", string2print);
     for (i = 0; i < len; i++) {
         writeChar2File(filePoint,string2print[i]);
 	}
@@ -41,25 +43,34 @@ void convertGaps (char *line){
     char aux[100];  //number of digits for gaps... posibility of ERROR
     char nn; 
     int numberGap=0;
-    
+    int lineLenght=strlen(line);
+    int lineIndex=1;
+
     for (c=line; *c; c++) {
         nn = *c;
         if (nn == gap)  {            // gap found
             numberGap++;
+            if(lineLenght==lineIndex){   //if it's last postion of line -> printString
+                sprintf(aux, "%d", numberGap);  //convert int to char*
+                //printf("... ....%s\n", aux);
+                printString(outFileFa2Gap,aux);
+                //reset counter
+                numberGap=0;
+            }
         }else{            
             if (numberGap!=0){      // 1st non-gap after gap
                 //print number of gaps
-                //****printf("%d", numberGap);
                 sprintf(aux, "%d", numberGap);  //convert int to char*
+                //printf("... ....%s\n", aux);
                 printString(outFileFa2Gap,aux);
                 //reset counter
                 numberGap=0;
             }
             //print nucleotide
-            //****printf("%c", nn);
+            //printf("... NN ... %c\n", nn);
             writeChar2File(outFileFa2Gap,nn);
-
         }
+        lineIndex++;
     }
 }
 void convertFasta (char *line){
@@ -67,6 +78,8 @@ void convertFasta (char *line){
     char nn; 
     int check=0;
     int auxDigit;
+    int lineLenght=strlen(line);
+    int lineIndex=1;
 
     for (c=line; *c; c++) {
         nn = *c;
@@ -96,7 +109,13 @@ void convertFasta (char *line){
             //printf("<< digit %d\n",auxDigit);
             check=1;
             //TODO -> check if its just 0 --> ERROR
+
+            //check if it's the last position of the string
+            if(lineLenght==lineIndex){   //if it's last postion of line -> printString
+                    convert_final_digit(auxDigit);
+            }
         }   
+        lineIndex++;
     }
 }
 void readFasta(char *fileName){
