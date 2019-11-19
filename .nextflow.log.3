@@ -1,0 +1,59 @@
+Nov-19 14:09:21.787 [main] DEBUG nextflow.cli.Launcher - $> nextflow run main.nf
+Nov-19 14:09:21.920 [main] INFO  nextflow.cli.CmdRun - N E X T F L O W  ~  version 19.10.0
+Nov-19 14:09:21.995 [main] INFO  nextflow.cli.CmdRun - Launching `main.nf` [sick_curran] - revision: fe3236be50
+Nov-19 14:09:22.241 [main] DEBUG nextflow.extension.OperatorEx - Dataflow extension methods: branch,buffer,chain,choice,collate,collect,collectFile,combine,concat,count,countBy,countFasta,countFastq,countLines,countText,cross,distinct,filter,first,flatMap,flatten,fork,groupBy,groupTuple,ifEmpty,into,join,last,map,max,mean,merge,min,mix,phase,print,println,randomSample,reduce,separate,set,splitCsv,splitFasta,splitFastq,splitText,spread,subscribe,sum,take,tap,toDouble,toFloat,toInteger,toList,toLong,toSortedList,transpose,unique,until,view
+Nov-19 14:09:22.274 [main] DEBUG nextflow.Session - Session uuid: 4d190a38-286d-44f3-8b8b-369e5d9c7777
+Nov-19 14:09:22.274 [main] DEBUG nextflow.Session - Run name: sick_curran
+Nov-19 14:09:22.277 [main] DEBUG nextflow.Session - Executor pool size: 12
+Nov-19 14:09:22.363 [main] DEBUG nextflow.cli.CmdRun - 
+  Version: 19.10.0 build 5170
+  Created: 21-10-2019 15:07 UTC (17:07 CEST)
+  System: Linux 4.15.0-70-generic
+  Runtime: Groovy 2.5.8 on Java HotSpot(TM) 64-Bit Server VM 1.8.0_231-b11
+  Encoding: UTF-8 (UTF-8)
+  Process: 31133@taiwan-big [127.0.1.1]
+  CPUs: 12 - Mem: 47.1 GB (37.7 GB) - Swap: 976 MB (56.4 MB)
+Nov-19 14:09:22.570 [main] DEBUG nextflow.Session - Work-dir: /home/edgar/CBCRG/msa_gap_format/work [ext2/ext3]
+Nov-19 14:09:22.655 [main] DEBUG nextflow.Session - Observer factory: TowerFactory
+Nov-19 14:09:22.658 [main] DEBUG nextflow.Session - Observer factory: DefaultObserverFactory
+Nov-19 14:09:23.085 [main] DEBUG nextflow.Session - Session start invoked
+Nov-19 14:09:23.964 [main] DEBUG nextflow.script.ScriptRunner - > Launching execution
+Nov-19 14:09:24.238 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Nov-19 14:09:24.238 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Nov-19 14:09:24.244 [main] DEBUG nextflow.executor.Executor - [warm up] executor > local
+Nov-19 14:09:24.260 [main] DEBUG n.processor.LocalPollingMonitor - Creating local task monitor for executor 'local' > cpus=12; memory=47.1 GB; capacity=12; pollInterval=100ms; dumpInterval=5m
+Nov-19 14:09:24.344 [main] DEBUG nextflow.processor.TaskProcessor - Creating operator > parseGaps -- maxForks: 12
+Nov-19 14:09:24.371 [main] DEBUG nextflow.script.BaseScript - No entry workflow defined
+Nov-19 14:09:24.372 [main] DEBUG nextflow.script.ScriptRunner - > Await termination 
+Nov-19 14:09:24.372 [main] DEBUG nextflow.Session - Session await
+Nov-19 14:09:24.632 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Nov-19 14:09:24.639 [Task submitter] INFO  nextflow.Session - [37/f13c6a] Submitted process > parseGaps (null)
+Nov-19 14:09:24.723 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 1; name: parseGaps (null); status: COMPLETED; exit: 1; error: -; workDir: /home/edgar/CBCRG/msa_gap_format/work/37/f13c6a8692c8706facda8251360622]
+Nov-19 14:09:24.763 [Task monitor] ERROR nextflow.processor.TaskProcessor - Error executing process > 'parseGaps (null)'
+
+Caused by:
+  Process `parseGaps (null)` terminated with an error exit status (1)
+
+Command executed:
+
+  /home/edgar/CBCRG/msa_gap_format/bin/gaps
+
+Command exit status:
+  1
+
+Command output:
+  (empty)
+
+Command error:
+  .command.sh: line 2: /home/edgar/CBCRG/msa_gap_format/bin/gaps: No such file or directory
+
+Work dir:
+  /home/edgar/CBCRG/msa_gap_format/work/37/f13c6a8692c8706facda8251360622
+
+Tip: you can replicate the issue by changing to the process work dir and entering the command `bash .command.run`
+Nov-19 14:09:24.773 [main] DEBUG nextflow.Session - Session await > all process finished
+Nov-19 14:09:24.774 [Task monitor] DEBUG nextflow.Session - Session aborted -- Cause: Process `parseGaps (null)` terminated with an error exit status (1)
+Nov-19 14:09:24.812 [main] DEBUG nextflow.Session - Session await > all barriers passed
+Nov-19 14:09:24.821 [main] DEBUG nextflow.trace.StatsObserver - Workflow completed > WorkflowStats[succeedCount=0; failedCount=1; ignoredCount=0; cachedCount=0; succeedDuration=0ms; failedDuration=25ms; cachedDuration=0ms]
+Nov-19 14:09:24.979 [main] DEBUG nextflow.CacheDB - Closing CacheDB done
+Nov-19 14:09:24.993 [main] DEBUG nextflow.script.ScriptRunner - > Execution complete -- Goodbye

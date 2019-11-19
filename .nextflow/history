@@ -1,0 +1,4 @@
+2019-11-19 14:09:22	3s	sick_curran	ERR	fe3236be5065e639e63af3af6fff922e	4d190a38-286d-44f3-8b8b-369e5d9c7777	nextflow run main.nf
+2019-11-19 14:10:04	2.9s	goofy_ekeblad	OK	bd4e7316010a1852696963605620d8b1	1638d7b8-9cf9-467f-af63-bce716bc769e	nextflow run main.nf
+2019-11-19 14:13:32	2.5s	distraught_mayer	OK	bd4e7316010a1852696963605620d8b1	a6823f81-59aa-48be-bd49-b3c23e89670f	nextflow run main.nf
+2019-11-19 14:15:22	1.9s	furious_galileo	OK	d1cb0c939e7fbdfd76490a1507430e88	1b721c43-f864-453b-8cce-13640b1f4321	nextflow run main.nf
