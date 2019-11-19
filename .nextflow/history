@@ -2,3 +2,20 @@
 2019-11-19 14:10:04	2.9s	goofy_ekeblad	OK	bd4e7316010a1852696963605620d8b1	1638d7b8-9cf9-467f-af63-bce716bc769e	nextflow run main.nf
 2019-11-19 14:13:32	2.5s	distraught_mayer	OK	bd4e7316010a1852696963605620d8b1	a6823f81-59aa-48be-bd49-b3c23e89670f	nextflow run main.nf
 2019-11-19 14:15:22	1.9s	furious_galileo	OK	d1cb0c939e7fbdfd76490a1507430e88	1b721c43-f864-453b-8cce-13640b1f4321	nextflow run main.nf
+2019-11-19 17:04:58	2.1s	maniac_rosalind	OK	345d6bcd286d889d0b1744472240d646	1b721c43-f864-453b-8cce-13640b1f4321	nextflow run main.nf -resume
+2019-11-19 17:08:20	2s	distracted_poitras	OK	f90a7ab54f5e1660a00e011f3b39be3a	1b721c43-f864-453b-8cce-13640b1f4321	nextflow run main.nf -resume
+2019-11-19 17:09:36	1.9s	sick_lamport	OK	c2662cfba52f19beaebc2c7f0708589f	1b721c43-f864-453b-8cce-13640b1f4321	nextflow run main.nf -resume
+2019-11-19 17:10:21	2.8s	tiny_lamarr	OK	c2662cfba52f19beaebc2c7f0708589f	1b721c43-f864-453b-8cce-13640b1f4321	nextflow run main.nf -resume
+2019-11-19 17:11:46	2.4s	big_shockley	OK	d8e2c244a14a794d1c958dc51847e3bb	1b721c43-f864-453b-8cce-13640b1f4321	nextflow run main.nf -resume
+2019-11-19 17:19:53	3.2s	mighty_jones	OK	28b77292d50456cbaf1a6cd04eada4e1	1b721c43-f864-453b-8cce-13640b1f4321	nextflow run main.nf -resume
+2019-11-19 17:21:05	2.2s	marvelous_bartik	ERR	4069476bc5433bd56bdbac1e72ed3fda	1b721c43-f864-453b-8cce-13640b1f4321	nextflow run main.nf -resume
+2019-11-19 17:21:40	2.8s	sick_mccarthy	ERR	64168219dc42d7cee5367ef80d82a2e1	1b721c43-f864-453b-8cce-13640b1f4321	nextflow run main.nf -resume
+2019-11-19 17:23:25	3s	nice_kalman	ERR	64168219dc42d7cee5367ef80d82a2e1	1b721c43-f864-453b-8cce-13640b1f4321	nextflow run main.nf -resume
+2019-11-19 17:25:44	2.4s	wise_leavitt	ERR	224418a5d7701adf956997e1aedb8962	1b721c43-f864-453b-8cce-13640b1f4321	nextflow run main.nf -resume
+2019-11-19 17:26:53	2.5s	fervent_jang	ERR	224418a5d7701adf956997e1aedb8962	1b721c43-f864-453b-8cce-13640b1f4321	nextflow run main.nf -resume
+2019-11-19 17:27:39	2.6s	kickass_koch	OK	f2123dce65018bba2385786b9512c7f7	1b721c43-f864-453b-8cce-13640b1f4321	nextflow run main.nf -resume
+2019-11-19 17:30:52	2.3s	magical_euler	ERR	43a3551027f4b38576d12b5412b29370	1b721c43-f864-453b-8cce-13640b1f4321	nextflow run main.nf -resume
+2019-11-19 17:44:01	2.5s	spontaneous_hodgkin	ERR	ef8a271e239e96c0ff5c73efe342dc09	1b721c43-f864-453b-8cce-13640b1f4321	nextflow run main.nf -resume
+2019-11-19 17:44:57	2.9s	deadly_brattain	ERR	ef8a271e239e96c0ff5c73efe342dc09	1b721c43-f864-453b-8cce-13640b1f4321	nextflow run main.nf -resume
+2019-11-19 20:14:38	2.8s	pedantic_laplace	OK	ef8a271e239e96c0ff5c73efe342dc09	e6c2f6b0-5835-4abe-a83c-4e262b251716	nextflow run main.nf
+2019-11-19 20:14:58	2.3s	condescending_franklin	ERR	43a3551027f4b38576d12b5412b29370	3a6a2273-ecb7-4d8f-9091-22f4f443efb1	nextflow run main.nf

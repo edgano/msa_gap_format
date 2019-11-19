@@ -85,6 +85,11 @@ void convertFasta (char *line){
         nn = *c;
         if (!isdigit(nn) || check==1){  //it's a nucleotide or non the first digit
             if(isdigit(nn)){
+                //printf("Digists in a row >> %c\n",nn);
+                //printf("lenght %d - index %d\n",lineLenght,lineIndex);
+                if(lineLenght==lineIndex){   //if it's last postion of line -> printString
+                    convert_final_digit(auxDigit);
+                }   
                 //second or more digits in a row
                 //nothing to do... it's already captured in the ATOI()
             }else{
@@ -109,11 +114,6 @@ void convertFasta (char *line){
             //printf("<< digit %d\n",auxDigit);
             check=1;
             //TODO -> check if its just 0 --> ERROR
-
-            //check if it's the last position of the string
-            if(lineLenght==lineIndex){   //if it's last postion of line -> printString
-                    convert_final_digit(auxDigit);
-            }
         }   
         lineIndex++;
     }
@@ -155,6 +155,7 @@ void readFasta(char *fileName){
                 convertGaps(line);
                 printString(outFileFa2Gap,"\n");
             }else {     // gaps >> fasta
+                printf("convert2Fasta: %s \n", line);
                 convertFasta(line);
                 printString(outFileGap2Fa,"\n");
             }

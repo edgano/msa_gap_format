@@ -1,7 +1,7 @@
 
 
 
-params.alignment = "${baseDir}/data/test.fa"
+params.alignment = "${baseDir}/data/*.aln"
 params.output = "${baseDir}/results/"
 
 // Channels containing sequences
@@ -9,8 +9,8 @@ if ( params.alignment ) {
   Channel
   .fromPath(params.alignment)
   .map { item -> [ item.baseName, item] }
-  //.view()
-  .set { aln }
+  .view()
+  .set { alnCh }
 }
 
 process parseGaps {
@@ -18,13 +18,16 @@ process parseGaps {
     publishDir "${params.output}", mode: 'copy', overwrite: true  
 
     input:
-      file(aln) from aln
+    set val(id), file(aln) from alnCh
 
     output:
-     set file("resultF2G.gap"), file("resultG2F.fa") into parserOut
+     set file(aln), file("resultF2G.gap"), file("resultG2F.fa"), file("${id}.out") into parserOut
 
     script:
     """
-    ${baseDir}/bin/gap
+    ${baseDir}/bin/gap ${aln}
+
+    echo "" >> ${aln}
+    diff -B ${aln} resultG2F.fa >> ${id}.out
     """
 }

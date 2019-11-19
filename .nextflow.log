@@ -1,37 +1,186 @@
-Nov-19 14:15:21.667 [main] DEBUG nextflow.cli.Launcher - $> nextflow run main.nf
-Nov-19 14:15:21.830 [main] INFO  nextflow.cli.CmdRun - N E X T F L O W  ~  version 19.10.0
-Nov-19 14:15:21.844 [main] INFO  nextflow.cli.CmdRun - Launching `main.nf` [furious_galileo] - revision: d1cb0c939e
-Nov-19 14:15:21.970 [main] DEBUG nextflow.extension.OperatorEx - Dataflow extension methods: branch,buffer,chain,choice,collate,collect,collectFile,combine,concat,count,countBy,countFasta,countFastq,countLines,countText,cross,distinct,filter,first,flatMap,flatten,fork,groupBy,groupTuple,ifEmpty,into,join,last,map,max,mean,merge,min,mix,phase,print,println,randomSample,reduce,separate,set,splitCsv,splitFasta,splitFastq,splitText,spread,subscribe,sum,take,tap,toDouble,toFloat,toInteger,toList,toLong,toSortedList,transpose,unique,until,view
-Nov-19 14:15:21.981 [main] DEBUG nextflow.Session - Session uuid: 1b721c43-f864-453b-8cce-13640b1f4321
-Nov-19 14:15:21.981 [main] DEBUG nextflow.Session - Run name: furious_galileo
-Nov-19 14:15:21.983 [main] DEBUG nextflow.Session - Executor pool size: 12
-Nov-19 14:15:22.001 [main] DEBUG nextflow.cli.CmdRun - 
+Nov-19 20:14:57.849 [main] DEBUG nextflow.cli.Launcher - $> nextflow run main.nf
+Nov-19 20:14:58.027 [main] INFO  nextflow.cli.CmdRun - N E X T F L O W  ~  version 19.10.0
+Nov-19 20:14:58.042 [main] INFO  nextflow.cli.CmdRun - Launching `main.nf` [condescending_franklin] - revision: 43a3551027
+Nov-19 20:14:58.167 [main] DEBUG nextflow.extension.OperatorEx - Dataflow extension methods: branch,buffer,chain,choice,collate,collect,collectFile,combine,concat,count,countBy,countFasta,countFastq,countLines,countText,cross,distinct,filter,first,flatMap,flatten,fork,groupBy,groupTuple,ifEmpty,into,join,last,map,max,mean,merge,min,mix,phase,print,println,randomSample,reduce,separate,set,splitCsv,splitFasta,splitFastq,splitText,spread,subscribe,sum,take,tap,toDouble,toFloat,toInteger,toList,toLong,toSortedList,transpose,unique,until,view
+Nov-19 20:14:58.179 [main] DEBUG nextflow.Session - Session uuid: 3a6a2273-ecb7-4d8f-9091-22f4f443efb1
+Nov-19 20:14:58.179 [main] DEBUG nextflow.Session - Run name: condescending_franklin
+Nov-19 20:14:58.181 [main] DEBUG nextflow.Session - Executor pool size: 12
+Nov-19 20:14:58.199 [main] DEBUG nextflow.cli.CmdRun - 
   Version: 19.10.0 build 5170
   Created: 21-10-2019 15:07 UTC (17:07 CEST)
   System: Linux 4.15.0-70-generic
   Runtime: Groovy 2.5.8 on Java HotSpot(TM) 64-Bit Server VM 1.8.0_231-b11
   Encoding: UTF-8 (UTF-8)
-  Process: 31703@taiwan-big [127.0.1.1]
-  CPUs: 12 - Mem: 47.1 GB (37.6 GB) - Swap: 976 MB (56.6 MB)
-Nov-19 14:15:22.086 [main] DEBUG nextflow.Session - Work-dir: /home/edgar/CBCRG/msa_gap_format/work [ext2/ext3]
-Nov-19 14:15:22.121 [main] DEBUG nextflow.Session - Observer factory: TowerFactory
-Nov-19 14:15:22.124 [main] DEBUG nextflow.Session - Observer factory: DefaultObserverFactory
-Nov-19 14:15:22.433 [main] DEBUG nextflow.Session - Session start invoked
-Nov-19 14:15:23.112 [main] DEBUG nextflow.script.ScriptRunner - > Launching execution
-Nov-19 14:15:23.334 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
-Nov-19 14:15:23.334 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
-Nov-19 14:15:23.340 [main] DEBUG nextflow.executor.Executor - [warm up] executor > local
-Nov-19 14:15:23.347 [main] DEBUG n.processor.LocalPollingMonitor - Creating local task monitor for executor 'local' > cpus=12; memory=47.1 GB; capacity=12; pollInterval=100ms; dumpInterval=5m
-Nov-19 14:15:23.418 [main] DEBUG nextflow.processor.TaskProcessor - Creating operator > parseGaps -- maxForks: 12
-Nov-19 14:15:23.445 [main] DEBUG nextflow.script.BaseScript - No entry workflow defined
-Nov-19 14:15:23.446 [main] DEBUG nextflow.script.ScriptRunner - > Await termination 
-Nov-19 14:15:23.447 [main] DEBUG nextflow.Session - Session await
-Nov-19 14:15:23.621 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
-Nov-19 14:15:23.627 [Task submitter] INFO  nextflow.Session - [92/c8ba91] Submitted process > parseGaps ()
-Nov-19 14:15:23.661 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 1; name: parseGaps (); status: COMPLETED; exit: 0; error: -; workDir: /home/edgar/CBCRG/msa_gap_format/work/92/c8ba91531fc4771d8a5adb1589f559]
-Nov-19 14:15:23.683 [Task monitor] DEBUG n.util.BlockingThreadExecutorFactory - Thread pool name=FileTransfer; maxThreads=36; maxQueueSize=108; keepAlive=1m
-Nov-19 14:15:23.692 [main] DEBUG nextflow.Session - Session await > all process finished
-Nov-19 14:15:23.695 [main] DEBUG nextflow.Session - Session await > all barriers passed
-Nov-19 14:15:23.703 [main] DEBUG nextflow.trace.StatsObserver - Workflow completed > WorkflowStats[succeedCount=1; failedCount=0; ignoredCount=0; cachedCount=0; succeedDuration=4ms; failedDuration=0ms; cachedDuration=0ms]
-Nov-19 14:15:23.875 [main] DEBUG nextflow.CacheDB - Closing CacheDB done
-Nov-19 14:15:23.886 [main] DEBUG nextflow.script.ScriptRunner - > Execution complete -- Goodbye
+  Process: 10412@taiwan-big [127.0.1.1]
+  CPUs: 12 - Mem: 47.1 GB (36 GB) - Swap: 976 MB (68.1 MB)
+Nov-19 20:14:58.283 [main] DEBUG nextflow.Session - Work-dir: /home/edgar/CBCRG/msa_gap_format/work [ext2/ext3]
+Nov-19 20:14:58.319 [main] DEBUG nextflow.Session - Observer factory: TowerFactory
+Nov-19 20:14:58.321 [main] DEBUG nextflow.Session - Observer factory: DefaultObserverFactory
+Nov-19 20:14:58.663 [main] DEBUG nextflow.Session - Session start invoked
+Nov-19 20:14:59.396 [main] DEBUG nextflow.script.ScriptRunner - > Launching execution
+Nov-19 20:14:59.447 [PathVisitor-1] DEBUG nextflow.file.PathVisitor - files for syntax: glob; folder: /home/edgar/CBCRG/msa_gap_format/data/; pattern: *.aln; options: [:]
+Nov-19 20:14:59.644 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Nov-19 20:14:59.644 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Nov-19 20:14:59.651 [main] DEBUG nextflow.executor.Executor - [warm up] executor > local
+Nov-19 20:14:59.658 [main] DEBUG n.processor.LocalPollingMonitor - Creating local task monitor for executor 'local' > cpus=12; memory=47.1 GB; capacity=12; pollInterval=100ms; dumpInterval=5m
+Nov-19 20:14:59.735 [main] DEBUG nextflow.processor.TaskProcessor - Creating operator > parseGaps -- maxForks: 12
+Nov-19 20:14:59.779 [main] DEBUG nextflow.script.BaseScript - No entry workflow defined
+Nov-19 20:14:59.780 [main] DEBUG nextflow.script.ScriptRunner - > Await termination 
+Nov-19 20:14:59.780 [main] DEBUG nextflow.Session - Session await
+Nov-19 20:14:59.971 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Nov-19 20:14:59.977 [Task submitter] INFO  nextflow.Session - [b7/ef14c0] Submitted process > parseGaps ()
+Nov-19 20:14:59.993 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Nov-19 20:14:59.993 [Task submitter] INFO  nextflow.Session - [19/e2904a] Submitted process > parseGaps ()
+Nov-19 20:15:00.000 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Nov-19 20:15:00.000 [Task submitter] INFO  nextflow.Session - [29/504e44] Submitted process > parseGaps ()
+Nov-19 20:15:00.007 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Nov-19 20:15:00.007 [Task submitter] INFO  nextflow.Session - [10/75f509] Submitted process > parseGaps ()
+Nov-19 20:15:00.013 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Nov-19 20:15:00.014 [Task submitter] INFO  nextflow.Session - [e7/51d641] Submitted process > parseGaps ()
+Nov-19 20:15:00.019 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Nov-19 20:15:00.020 [Task submitter] INFO  nextflow.Session - [66/bf953c] Submitted process > parseGaps ()
+Nov-19 20:15:00.026 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Nov-19 20:15:00.026 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 1; name: parseGaps (); status: COMPLETED; exit: 1; error: -; workDir: /home/edgar/CBCRG/msa_gap_format/work/19/e2904a0f33aba49a708ec4cef4b892]
+Nov-19 20:15:00.026 [Task submitter] INFO  nextflow.Session - [80/f06315] Submitted process > parseGaps ()
+Nov-19 20:15:00.085 [Task monitor] ERROR nextflow.processor.TaskProcessor - Error executing process > 'parseGaps ()'
+
+Caused by:
+  Process `parseGaps ()` terminated with an error exit status (1)
+
+Command executed:
+
+  /home/edgar/CBCRG/msa_gap_format/bin/gap seatoxin.dpa_1000.CLUSTALO.with.CLUSTALO.tree.aln
+  
+  echo "" >> seatoxin.dpa_1000.CLUSTALO.with.CLUSTALO.tree.aln
+  diff -B seatoxin.dpa_1000.CLUSTALO.with.CLUSTALO.tree.aln resultG2F.fa >> seatoxin.dpa_1000.CLUSTALO.with.CLUSTALO.tree.out
+
+Command exit status:
+  1
+
+Command output:
+  convert2Fasta: 2ACKCDDEGPDIRTAPLTGTVDLG7SCNAGWEKCASYYTIIADCC4 
+  convert2Fasta: 2PCLCDSDGPRPRGNTLSGILWFYP5SGCPSGWHNCKAHGPNIGWCC4 
+  convert2Fasta: 2PCLCVSDGPSTRGNNLSGIMWMKTGGYGGNGCPKGWHFCGKSRGFFSDCC4 
+  convert2Fasta: 2ACLCDSDGPSVRGNTLSGTYWLA7GCPSGWHNCKSSGQLIGACC4 
+  convert2Fasta: 2ACKCDDDGPDIRSATLTGTVDLG7SCNEGWEKCASFYTILADCC4 
+  convert2Fasta: 2PCLCVSDGPRPRGNNLSGTIWMKTGGYGGNGCPKGWHFCGKSRGLLSDCC4 
+  convert2Fasta: 2ACRCDSDGPTVRGNSLSGTLWLT6GGCPSGWHNCRGSGPFIGYCC4 
+  convert2Fasta: 2PCLCDSDGPSVRGNTLSGTLWLF7GCPSGWHNCKARGPTIGWCC4 
+  convert2Fasta: 2ACLCDADGPSVSGNTLSGILWLA7GCPSGWHNCKAHGPTIGWCC4 
+  convert2Fasta: 2SCLCASDGPTTRGNSLSGTIWLF7GCPSGWGDCKG1RAIAGTCC4 
+  convert2Fasta: 2SCKCDDDGPDVRSATFTGTVDFA7YCNAGWEKCLAVYTPVASCC4 
+  convert2Fasta: 2PCACDSDGPDIRSASLSGIVWMG7SCPSGWKKCKSYYSIVADCC4 
+  convert2Fasta: 2PCLCDSDGPSVRGNTLSGIIWLA7GCPSGWHNCKKHGPTIGWCC4 
+  convert2Fasta: 2ACLCKSDGPNTRGNSMSGTIWVF7GCPSGWNNCEG1RAIIGYCC4 
+  convert2Fasta: 2ACLCDSDGPNVRGNTLSGTIWLA7GCPSGWHNCKAHGPTIGWCC4 
+  convert2Fasta: 2ACKCDDDGPDIRSATLTGTVDLG7SCNEGWEKCASYYTVVADCC4 
+  convert2Fasta: 2PCRCDSDGPSVHGNPLSGTIWVT7SCATGWHKCNSENELFHECC4 
+  convert2Fasta: 2PCVCDSDGPDIRSASLSGIVWMG7SCPSGWKKCKSYYSIVADCC4 
+  convert2Fasta: 2PCACDSDGPDIRSASLSGIVWMG7SCPSGWKKCKSYYSIVADCC4 
+  convert2Fasta: 2PCKCDGD6KHMSGTFWMF7GCPPGWHSCVVANAF3CC4 
+  convert2Fasta: 2PCLCVSDGPRPRGNNLSGIMWMKTGGYGGNGCPKGWHFCGKSRGFFSDCC4 
+  convert2Fasta: 2ACRCDSDGPTVHGDSLSGTLWLT6GGCPSGWHNCRGSGPFIGYCC4 
+  convert2Fasta: 2PCLCANSGPNTRGNDLNGIVWVF7GCPSGWHDCHG1RAMVGYCC4 
+  convert2Fasta: 2PCLCDSDGPSVRGNTLSGTLWLA7GCPSGWHNCKAHGPTIGWCC4 
+  convert2Fasta: 2SCLCDSDGPSVRGNTLSGTLWLYP5SGCPSGWHNCKAHGPTIGWCC4 
+  convert2Fasta: 2PCACDSDGPDIRSASLSGIVWMG7SCPSGWKKCKSYYSIVADCC4 
+  convert2Fasta: 1AACKCDDEGPDIRTAPLTGTVDLG7SCNAGWEKCASYYTIIADCCRKKK 
+  convert2Fasta: GAACLCKSDGPNTRGNSMSGTIWVF7GCPSGWNNCEG1RAIIGYCCKQ2 
+  convert2Fasta: 2ACFCDSDGPSVSGNTLSGILWLA7GCPSGWHNCKAHGPNIGWCC4 
+  convert2Fasta: 2ECKCEGDAPDLS2HMTGTVYFSCK5GGDGSWSKCNT1YTAVADCC4 
+  convert2Fasta: 2ACRCESDGPDVRSATFTGTVDLW7NCNTGWHKCIATYTAVASCC4 
+  convert2Fasta: 2ACKCDDDGPDVRSATFTGTVDLG7SCNSGWEKCASYYTVIADCC4 
+  convert2Fasta: 2PCRCDIDGPSVRG1TLSGSVDPW7NCNTGWKKCTSFYTAVASCC4 
+  convert2Fasta: 2PCACDSDGPDIRSASLSGIVWMG7SCPSGWKKCKSYYSVVADCC4 
+  convert2Fasta: 2ECKCKGDAPDLS2HMTGTVYFSCK5GGDGSWSKCNT1YTAVADCC4 
+  convert2Fasta: 2NCKCDDEGPNVRTAPLTGYVDLG7YCNEGWEKCASYYSPIAECC4 
+  convert2Fasta: 2PCRCDSDGPSVHGNTLSGTIWVG7SCETGWHKCNTEHNLFHECC4 
+  convert2Fasta: 2PCACDSDGPDIRSASLSGIVWMG7SCPSGWKKCKSYYSIVADCC4 
+  convert2Fasta: 2PCACDSDGPDIRSASLSGIVWMG7SCPSGWKKCKSYYSIVADCC4 
+  convert2Fasta: 2PCLCDSDGPSVRGNTLSGTVWVF7GCPSGWHICTSDGPTIGSCC4 
+  convert2Fasta: GVPCLCDSDGPRPRGNTLSGILWFYP5SGCPSGWHNCKAHGPNIGWCCKK2 
+  convert2Fasta: GVSCLCDSDGPSVRGNTLSGTLWLYP5SGCPSGWHNCKAHGPTIGWCCKQ2 
+  convert2Fasta: 2PCLCDSDGPSVRGNTLSGILWLA7GCPSGWHNCKAHGPTIGWCC4 
+  convert2Fasta: 2PCACDSDGPDIRSASLSGIVWMG7SCPSGWKKCKSYYSIVADCC4 
+  convert2Fasta: 2PCLCVSDGPSTRGNKLSGTIWMKTGGYGGNGCPKGWHFCGKSRGLLSDCC4 
+  convert2Fasta: 2PCLCDSDGPSVRGNTLSGILWLA7GCPSGWHNCKKHKPTIGWCC4 
+  convert2Fasta: 2PCLCDSDGPSVRGNTLSGIIWLA7GCPSGWHNCKKHGPTIGWCC4 
+  convert2Fasta: 2PCACDSDGPDIRSASLSGIVWMG7SCPSGWKKCKSYYSIVADCC4 
+  convert2Fasta: 4ACACDSPGIGSASLSGIVWMG7SCPSGWKKCKSYYSIVADCC4 
+  convert2Fasta: 2ACRCDSDGPTSRGNTLTGTLWLT6GGCPSGWHNCRGSGPFIGYCC4 
+
+Command wrapper:
+  convert2Fasta: 2ACKCDDEGPDIRTAPLTGTVDLG7SCNAGWEKCASYYTIIADCC4 
+  convert2Fasta: 2PCLCDSDGPRPRGNTLSGILWFYP5SGCPSGWHNCKAHGPNIGWCC4 
+  convert2Fasta: 2PCLCVSDGPSTRGNNLSGIMWMKTGGYGGNGCPKGWHFCGKSRGFFSDCC4 
+  convert2Fasta: 2ACLCDSDGPSVRGNTLSGTYWLA7GCPSGWHNCKSSGQLIGACC4 
+  convert2Fasta: 2ACKCDDDGPDIRSATLTGTVDLG7SCNEGWEKCASFYTILADCC4 
+  convert2Fasta: 2PCLCVSDGPRPRGNNLSGTIWMKTGGYGGNGCPKGWHFCGKSRGLLSDCC4 
+  convert2Fasta: 2ACRCDSDGPTVRGNSLSGTLWLT6GGCPSGWHNCRGSGPFIGYCC4 
+  convert2Fasta: 2PCLCDSDGPSVRGNTLSGTLWLF7GCPSGWHNCKARGPTIGWCC4 
+  convert2Fasta: 2ACLCDADGPSVSGNTLSGILWLA7GCPSGWHNCKAHGPTIGWCC4 
+  convert2Fasta: 2SCLCASDGPTTRGNSLSGTIWLF7GCPSGWGDCKG1RAIAGTCC4 
+  convert2Fasta: 2SCKCDDDGPDVRSATFTGTVDFA7YCNAGWEKCLAVYTPVASCC4 
+  convert2Fasta: 2PCACDSDGPDIRSASLSGIVWMG7SCPSGWKKCKSYYSIVADCC4 
+  convert2Fasta: 2PCLCDSDGPSVRGNTLSGIIWLA7GCPSGWHNCKKHGPTIGWCC4 
+  convert2Fasta: 2ACLCKSDGPNTRGNSMSGTIWVF7GCPSGWNNCEG1RAIIGYCC4 
+  convert2Fasta: 2ACLCDSDGPNVRGNTLSGTIWLA7GCPSGWHNCKAHGPTIGWCC4 
+  convert2Fasta: 2ACKCDDDGPDIRSATLTGTVDLG7SCNEGWEKCASYYTVVADCC4 
+  convert2Fasta: 2PCRCDSDGPSVHGNPLSGTIWVT7SCATGWHKCNSENELFHECC4 
+  convert2Fasta: 2PCVCDSDGPDIRSASLSGIVWMG7SCPSGWKKCKSYYSIVADCC4 
+  convert2Fasta: 2PCACDSDGPDIRSASLSGIVWMG7SCPSGWKKCKSYYSIVADCC4 
+  convert2Fasta: 2PCKCDGD6KHMSGTFWMF7GCPPGWHSCVVANAF3CC4 
+  convert2Fasta: 2PCLCVSDGPRPRGNNLSGIMWMKTGGYGGNGCPKGWHFCGKSRGFFSDCC4 
+  convert2Fasta: 2ACRCDSDGPTVHGDSLSGTLWLT6GGCPSGWHNCRGSGPFIGYCC4 
+  convert2Fasta: 2PCLCANSGPNTRGNDLNGIVWVF7GCPSGWHDCHG1RAMVGYCC4 
+  convert2Fasta: 2PCLCDSDGPSVRGNTLSGTLWLA7GCPSGWHNCKAHGPTIGWCC4 
+  convert2Fasta: 2SCLCDSDGPSVRGNTLSGTLWLYP5SGCPSGWHNCKAHGPTIGWCC4 
+  convert2Fasta: 2PCACDSDGPDIRSASLSGIVWMG7SCPSGWKKCKSYYSIVADCC4 
+  convert2Fasta: 1AACKCDDEGPDIRTAPLTGTVDLG7SCNAGWEKCASYYTIIADCCRKKK 
+  convert2Fasta: GAACLCKSDGPNTRGNSMSGTIWVF7GCPSGWNNCEG1RAIIGYCCKQ2 
+  convert2Fasta: 2ACFCDSDGPSVSGNTLSGILWLA7GCPSGWHNCKAHGPNIGWCC4 
+  convert2Fasta: 2ECKCEGDAPDLS2HMTGTVYFSCK5GGDGSWSKCNT1YTAVADCC4 
+  convert2Fasta: 2ACRCESDGPDVRSATFTGTVDLW7NCNTGWHKCIATYTAVASCC4 
+  convert2Fasta: 2ACKCDDDGPDVRSATFTGTVDLG7SCNSGWEKCASYYTVIADCC4 
+  convert2Fasta: 2PCRCDIDGPSVRG1TLSGSVDPW7NCNTGWKKCTSFYTAVASCC4 
+  convert2Fasta: 2PCACDSDGPDIRSASLSGIVWMG7SCPSGWKKCKSYYSVVADCC4 
+  convert2Fasta: 2ECKCKGDAPDLS2HMTGTVYFSCK5GGDGSWSKCNT1YTAVADCC4 
+  convert2Fasta: 2NCKCDDEGPNVRTAPLTGYVDLG7YCNEGWEKCASYYSPIAECC4 
+  convert2Fasta: 2PCRCDSDGPSVHGNTLSGTIWVG7SCETGWHKCNTEHNLFHECC4 
+  convert2Fasta: 2PCACDSDGPDIRSASLSGIVWMG7SCPSGWKKCKSYYSIVADCC4 
+  convert2Fasta: 2PCACDSDGPDIRSASLSGIVWMG7SCPSGWKKCKSYYSIVADCC4 
+  convert2Fasta: 2PCLCDSDGPSVRGNTLSGTVWVF7GCPSGWHICTSDGPTIGSCC4 
+  convert2Fasta: GVPCLCDSDGPRPRGNTLSGILWFYP5SGCPSGWHNCKAHGPNIGWCCKK2 
+  convert2Fasta: GVSCLCDSDGPSVRGNTLSGTLWLYP5SGCPSGWHNCKAHGPTIGWCCKQ2 
+  convert2Fasta: 2PCLCDSDGPSVRGNTLSGILWLA7GCPSGWHNCKAHGPTIGWCC4 
+  convert2Fasta: 2PCACDSDGPDIRSASLSGIVWMG7SCPSGWKKCKSYYSIVADCC4 
+  convert2Fasta: 2PCLCVSDGPSTRGNKLSGTIWMKTGGYGGNGCPKGWHFCGKSRGLLSDCC4 
+  convert2Fasta: 2PCLCDSDGPSVRGNTLSGILWLA7GCPSGWHNCKKHKPTIGWCC4 
+  convert2Fasta: 2PCLCDSDGPSVRGNTLSGIIWLA7GCPSGWHNCKKHGPTIGWCC4 
+  convert2Fasta: 2PCACDSDGPDIRSASLSGIVWMG7SCPSGWKKCKSYYSIVADCC4 
+  convert2Fasta: 4ACACDSPGIGSASLSGIVWMG7SCPSGWKKCKSYYSIVADCC4 
+  convert2Fasta: 2ACRCDSDGPTSRGNTLTGTLWLT6GGCPSGWHNCRGSGPFIGYCC4 
+
+Work dir:
+  /home/edgar/CBCRG/msa_gap_format/work/19/e2904a0f33aba49a708ec4cef4b892
+
+Tip: you can try to figure out what's wrong by changing to the process work dir and showing the script file named `.command.sh`
+Nov-19 20:15:00.096 [Task monitor] DEBUG nextflow.Session - Session aborted -- Cause: Process `parseGaps ()` terminated with an error exit status (1)
+Nov-19 20:15:00.119 [main] DEBUG nextflow.Session - Session await > all process finished
+Nov-19 20:15:00.120 [main] DEBUG nextflow.Session - Session await > all barriers passed
+Nov-19 20:15:00.124 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 2; name: parseGaps (); status: COMPLETED; exit: 0; error: -; workDir: /home/edgar/CBCRG/msa_gap_format/work/10/75f50919ea17ea2057c464ecdc42f5]
+Nov-19 20:15:00.134 [main] WARN  n.processor.TaskPollingMonitor - Killing pending tasks (5)
+Nov-19 20:15:00.161 [Task monitor] DEBUG n.util.BlockingThreadExecutorFactory - Thread pool name=FileTransfer; maxThreads=36; maxQueueSize=108; keepAlive=1m
+Nov-19 20:15:00.178 [main] DEBUG nextflow.executor.LocalTaskHandler - Unable to kill parseGaps () -- command: kill -TERM 10530; exit: 1 
+ bash: line 0: kill: (10530) - No such process
+
+Nov-19 20:15:00.182 [main] DEBUG nextflow.executor.LocalTaskHandler - Unable to kill parseGaps () -- command: kill -TERM 10562; exit: 1 
+ bash: line 0: kill: (10562) - No such process
+
+Nov-19 20:15:00.188 [main] DEBUG nextflow.executor.LocalTaskHandler - Unable to kill parseGaps () -- command: kill -TERM 10583; exit: 1 
+ bash: line 0: kill: (10583) - No such process
+
+Nov-19 20:15:00.194 [main] DEBUG nextflow.trace.StatsObserver - Workflow completed > WorkflowStats[succeedCount=0; failedCount=6; ignoredCount=0; cachedCount=0; succeedDuration=0ms; failedDuration=1ms; cachedDuration=0ms]
+Nov-19 20:15:00.196 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 6; name: parseGaps (); status: COMPLETED; exit: 1; error: -; workDir: /home/edgar/CBCRG/msa_gap_format/work/e7/51d6410cf154286a6c8604e08a410b]
+Nov-19 20:15:00.306 [main] DEBUG nextflow.CacheDB - Closing CacheDB done
+Nov-19 20:15:00.321 [main] DEBUG nextflow.script.ScriptRunner - > Execution complete -- Goodbye
