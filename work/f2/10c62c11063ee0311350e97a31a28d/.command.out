@@ -1,7 +1,0 @@
-## FASTA TO GAP ##
-    Input file: test.fa
-    Output file: resultF2G.gap
-
-## GAP TO FASTA ##
-    Input file: resultF2G.gap
-    Output file: resultG2F.fa
