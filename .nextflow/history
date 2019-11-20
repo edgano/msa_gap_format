@@ -19,3 +19,6 @@
 2019-11-19 17:44:57	2.9s	deadly_brattain	ERR	ef8a271e239e96c0ff5c73efe342dc09	1b721c43-f864-453b-8cce-13640b1f4321	nextflow run main.nf -resume
 2019-11-19 20:14:38	2.8s	pedantic_laplace	OK	ef8a271e239e96c0ff5c73efe342dc09	e6c2f6b0-5835-4abe-a83c-4e262b251716	nextflow run main.nf
 2019-11-19 20:14:58	2.3s	condescending_franklin	ERR	43a3551027f4b38576d12b5412b29370	3a6a2273-ecb7-4d8f-9091-22f4f443efb1	nextflow run main.nf
+2019-11-20 11:27:01	3.5s	reverent_payne	ERR	43a3551027f4b38576d12b5412b29370	7025d1aa-41a8-42ef-8732-e8935e094f1c	nextflow run main.nf
+2019-11-20 11:30:21	2.9s	tiny_mayer	ERR	43a3551027f4b38576d12b5412b29370	7025d1aa-41a8-42ef-8732-e8935e094f1c	nextflow run main.nf -resume
+2019-11-20 11:32:33	2.7s	tender_ride	OK	43a3551027f4b38576d12b5412b29370	7025d1aa-41a8-42ef-8732-e8935e094f1c	nextflow run main.nf -resume
