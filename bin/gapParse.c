@@ -5,8 +5,8 @@
 #include <ctype.h>
 
 char * inputFasta; //= "test.fa";
-char * outputFileFA2Gap = "resultF2G.gap";
-char * outputFileGap2FA = "resultG2F.fa";
+char* outputFileFA2Gap = "resultF2G.gap";
+char* outputFileGap2FA = "resultG2F.fa";
 FILE *outFileFa2Gap;
 FILE *outFileGap2Fa;
 bool gaps;
@@ -88,7 +88,7 @@ void convertFasta (char *line){
                 //printf("Digists in a row >> %c\n",nn);  
                 //second or more digits in a row
                 //nothing to do... it's already captured in the ATOI()
-                printf("DIGIT> lenght %d - index %d\n",lineLenght,lineIndex);
+                //printf("DIGIT> lenght %d - index %d\n",lineLenght,lineIndex);
 
                 if(lineLenght==lineIndex){   //if it's last postion of line -> printString
                     convert_final_digit(auxDigit);
@@ -115,7 +115,7 @@ void convertFasta (char *line){
             //printf("<< digit %d\n",auxDigit);
             check=1;
             //TODO -> check if its just 0 --> ERROR
-            printf("ELSE>lenght %d - index %d\n",lineLenght,lineIndex);
+            //printf("ELSE>lenght %d - index %d\n",lineLenght,lineIndex);
             if(lineLenght==lineIndex){   //if it's last postion of line -> printString
                 convert_final_digit(auxDigit);
             }
@@ -160,7 +160,7 @@ void readFasta(char *fileName){
                 convertGaps(line);
                 printString(outFileFa2Gap,"\n");
             }else {     // gaps >> fasta
-                printf("convert2Fasta: %s \n", line);
+                //printf("convert2Fasta: %s \n", line);
                 convertFasta(line);
                 printString(outFileGap2Fa,"\n");
             }
