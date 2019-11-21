@@ -4,12 +4,14 @@
 #include <stdbool.h>
 #include <ctype.h>
 
-char * inputFasta; //= "test.fa";
+char* inputFasta; //= "test.fa";
 char* outputFileFA2Gap = "resultF2G.gap";
 char* outputFileGap2FA = "resultG2F.fa";
 FILE *outFileFa2Gap;
 FILE *outFileGap2Fa;
+
 bool gaps;
+char* fasta2Gap;
 char gap = '-';
 
 int writeChar2File(FILE *outFile, char char2write){
@@ -20,7 +22,7 @@ int writeChar2File(FILE *outFile, char char2write){
         //printf("done printChar\n");
    }
    else {
-  	  printf("\n Unable to Create or Open the Sample.txt File");
+  	  printf("\n Unable to Create or Open the %s File",outFile);
    }
    return 0;
 }
@@ -186,20 +188,42 @@ int closeResultFile(FILE *outFile){
     // printf("\nWe have written the file successfully\n");
 	fclose(outFile);	
 }
+void strip_ext(char *fname){
+    char *end = fname + strlen(fname);
+
+    while (end > fname && *end != '.' && *end != '\\' && *end != '/') {
+        --end;
+    }
+    if ((end > fname && *end == '.') && (*(end - 1) != '\\' && *(end - 1) != '/')) {
+        *end = '\0';
+    }  
+}
 int main(int argc, char* argv []){
 
-    //open result files
-    outFileFa2Gap = openResultFile(outputFileFA2Gap);
-    outFileGap2Fa = openResultFile(outputFileGap2FA);
+    inputFasta=argv[1];             // file to convert
+    fasta2Gap=argv[2];            //second arg ==true if we want fasta -> gap format
 
-    inputFasta=argv[1];
-    printf("## FASTA TO GAP ##\n    Input file: %s\n    Output file: %s\n",inputFasta,outputFileFA2Gap);
-    convert2Gap(inputFasta);
-    closeResultFile(outFileFa2Gap);
+    if (strcmp(fasta2Gap, "true") == 0){     // FASTA to GAP
+        //open result files
+        outFileFa2Gap = openResultFile(outputFileFA2Gap);
+        printf("## FASTA TO GAP ##\n    Input file: %s\n",inputFasta);
 
-    printf("\n## GAP TO FASTA ##\n    Input file: %s\n    Output file: %s\n",outputFileFA2Gap,outputFileGap2FA);
-    convert2Fasta(outputFileFA2Gap);
-    closeResultFile(outFileGap2Fa);
+        convert2Gap(inputFasta);
+        closeResultFile(outFileFa2Gap);
 
+        printf("    Output file: %s\n",outputFileFA2Gap);
+
+    }else if(strcmp(fasta2Gap, "false") == 0){              //GAP to FASTA
+        //open result files
+        outFileGap2Fa = openResultFile(outputFileGap2FA);
+        printf("## GAP TO FASTA ##\n    Input file: %s\n",inputFasta);
+
+        convert2Fasta(inputFasta);
+        closeResultFile(outFileGap2Fa);
+
+        printf("    Output file: %s\n",outputFileGap2FA);
+    }else {
+        printf("Not a valid mode to parse %s\nUse \"true\" to convert Fa->Gap and \"false\" to go Gap->Fa\n",fasta2Gap);
+    }
     return 0;
 }

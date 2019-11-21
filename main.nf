@@ -1,14 +1,21 @@
 #!/usr/bin/env nextflow
 
-//params.alignment = "${baseDir}/results/alignments/*.dpa_1000.*.tree.aln"
-params.alignment = "/users/cn/efloden/projects/dpa-benchfam-99k/results/alignments/*.dpa_1000.*.tree.aln"
-params.output = "${baseDir}/results/benchfam"
+params.fasta = "${baseDir}/data/test.fa"
+//params.fasta = "${baseDir}/results/alignments/*.dpa_1000.*.tree.aln"
+//params.fasta = "/users/cn/efloden/projects/dpa-benchfam-100k/results/alignments/*.dpa_1000.*.tree.aln"
+params.gaps = "${baseDir}/data/test.gap"
+
+params.fa2gap = false
+
+params.output = "${baseDir}/results"
 
 
 log.info """\
          R E G R E S S I V E   M S A   A n a l y s i s  ~  version 0.1"
          ======================================="
-         Input Alignments (ALN)                         : ${params.tfa}
+         Input Alignments (FA)                          : ${params.fasta}
+         Input Alignments (GAPS)                        : ${params.gaps}   
+         FA -->> GAP                                    : ${params.fa2gap}  
          Output directory (DIRECTORY)                   : ${params.output}
          \
          """
@@ -16,33 +23,55 @@ log.info """\
 
 
 // Channels containing sequences
-if ( params.alignment ) {
+if ( params.fasta ) {
   Channel
-  .fromPath(params.alignment)
+  .fromPath(params.fasta)
   .map { item -> [ item.baseName, item] }
-  .view()
-  .set { alnCh }
+  .set { faCh }
 }
 
-process parseGaps {
+if ( params.gaps ) {
+  Channel
+  .fromPath(params.gaps)
+  .map { item -> [ item.baseName, item] }
+  .set { gapCh }
+}
+
+process fasta2Gap {
     tag ""
-    publishDir "${params.output}", mode: 'copy', overwrite: true
+    publishDir "${params.output}/gap", mode: 'copy', overwrite: true
 
     input:
-    set val(id), file(aln) from alnCh
+    set val(id), file(aln) from faCh
 
     output:
-     set file(aln), file("${id}_F2G.gap"), file("${id}_G2F.fa"), file("${id}_diff.out") into parserOut
+      file("${id}_F2G.gap") into fa2gapOut
+
+   when:
+      params.fa2gap
 
     script:
     """
-    ${baseDir}/bin/gap ${aln}
-
+    ${baseDir}/bin/gap ${aln} ${params.fa2gap}
     mv resultF2G.gap ${id}_F2G.gap
+    """
+}
+process gap2Fasta {
+    tag ""
+    publishDir "${params.output}/fa", mode: 'copy', overwrite: true
+
+    input:
+    set val(id), file(aln) from gapCh
+
+    output:
+      file("${id}_G2F.fa") into ga2fapOut
+
+   when:
+      !params.fa2gap
+
+    script:
+    """
+    ${baseDir}/bin/gap ${aln} ${params.fa2gap}
     mv resultG2F.fa ${id}_G2F.fa
-
-    echo "" >> ${aln}
-    diff -B ${aln} ${id}_G2F.fa >> ${id}_diff.out
-
     """
 }

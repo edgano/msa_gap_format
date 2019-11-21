@@ -1,56 +1,47 @@
-Nov-20 11:32:32.873 [main] DEBUG nextflow.cli.Launcher - $> nextflow run main.nf -resume
-Nov-20 11:32:33.057 [main] INFO  nextflow.cli.CmdRun - N E X T F L O W  ~  version 19.10.0
-Nov-20 11:32:33.072 [main] INFO  nextflow.cli.CmdRun - Launching `main.nf` [tender_ride] - revision: 43a3551027
-Nov-20 11:32:33.205 [main] DEBUG nextflow.extension.OperatorEx - Dataflow extension methods: branch,buffer,chain,choice,collate,collect,collectFile,combine,concat,count,countBy,countFasta,countFastq,countLines,countText,cross,distinct,filter,first,flatMap,flatten,fork,groupBy,groupTuple,ifEmpty,into,join,last,map,max,mean,merge,min,mix,phase,print,println,randomSample,reduce,separate,set,splitCsv,splitFasta,splitFastq,splitText,spread,subscribe,sum,take,tap,toDouble,toFloat,toInteger,toList,toLong,toSortedList,transpose,unique,until,view
-Nov-20 11:32:33.216 [main] DEBUG nextflow.Session - Session uuid: 7025d1aa-41a8-42ef-8732-e8935e094f1c
-Nov-20 11:32:33.216 [main] DEBUG nextflow.Session - Run name: tender_ride
-Nov-20 11:32:33.218 [main] DEBUG nextflow.Session - Executor pool size: 12
-Nov-20 11:32:33.237 [main] DEBUG nextflow.cli.CmdRun - 
+Nov-21 15:47:38.793 [main] DEBUG nextflow.cli.Launcher - $> nextflow run main.nf --fa2gap true
+Nov-21 15:47:38.999 [main] INFO  nextflow.cli.CmdRun - N E X T F L O W  ~  version 19.10.0
+Nov-21 15:47:39.017 [main] INFO  nextflow.cli.CmdRun - Launching `main.nf` [goofy_shannon] - revision: da49fb3074
+Nov-21 15:47:39.147 [main] DEBUG nextflow.extension.OperatorEx - Dataflow extension methods: branch,buffer,chain,choice,collate,collect,collectFile,combine,concat,count,countBy,countFasta,countFastq,countLines,countText,cross,distinct,filter,first,flatMap,flatten,fork,groupBy,groupTuple,ifEmpty,into,join,last,map,max,mean,merge,min,mix,phase,print,println,randomSample,reduce,separate,set,splitCsv,splitFasta,splitFastq,splitText,spread,subscribe,sum,take,tap,toDouble,toFloat,toInteger,toList,toLong,toSortedList,transpose,unique,until,view
+Nov-21 15:47:39.158 [main] DEBUG nextflow.Session - Session uuid: 6658758c-20e1-416b-a8f8-59c503e03315
+Nov-21 15:47:39.158 [main] DEBUG nextflow.Session - Run name: goofy_shannon
+Nov-21 15:47:39.160 [main] DEBUG nextflow.Session - Executor pool size: 12
+Nov-21 15:47:39.177 [main] DEBUG nextflow.cli.CmdRun - 
   Version: 19.10.0 build 5170
   Created: 21-10-2019 15:07 UTC (17:07 CEST)
   System: Linux 4.15.0-70-generic
   Runtime: Groovy 2.5.8 on Java HotSpot(TM) 64-Bit Server VM 1.8.0_231-b11
   Encoding: UTF-8 (UTF-8)
-  Process: 21663@taiwan-big [127.0.1.1]
-  CPUs: 12 - Mem: 47.1 GB (28.1 GB) - Swap: 976 MB (8.4 MB)
-Nov-20 11:32:33.336 [main] DEBUG nextflow.Session - Work-dir: /home/edgar/CBCRG/msa_gap_format/work [ext2/ext3]
-Nov-20 11:32:33.374 [main] DEBUG nextflow.Session - Observer factory: TowerFactory
-Nov-20 11:32:33.378 [main] DEBUG nextflow.Session - Observer factory: DefaultObserverFactory
-Nov-20 11:32:33.746 [main] DEBUG nextflow.Session - Session start invoked
-Nov-20 11:32:34.413 [main] DEBUG nextflow.script.ScriptRunner - > Launching execution
-Nov-20 11:32:34.464 [PathVisitor-1] DEBUG nextflow.file.PathVisitor - files for syntax: glob; folder: /home/edgar/CBCRG/msa_gap_format/data/; pattern: *.aln; options: [:]
-Nov-20 11:32:34.664 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
-Nov-20 11:32:34.664 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
-Nov-20 11:32:34.671 [main] DEBUG nextflow.executor.Executor - [warm up] executor > local
-Nov-20 11:32:34.678 [main] DEBUG n.processor.LocalPollingMonitor - Creating local task monitor for executor 'local' > cpus=12; memory=47.1 GB; capacity=12; pollInterval=100ms; dumpInterval=5m
-Nov-20 11:32:34.754 [main] DEBUG nextflow.processor.TaskProcessor - Creating operator > parseGaps -- maxForks: 12
-Nov-20 11:32:34.793 [main] DEBUG nextflow.script.BaseScript - No entry workflow defined
-Nov-20 11:32:34.794 [main] DEBUG nextflow.script.ScriptRunner - > Await termination 
-Nov-20 11:32:34.794 [main] DEBUG nextflow.Session - Session await
-Nov-20 11:32:35.008 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
-Nov-20 11:32:35.014 [Task submitter] INFO  nextflow.Session - [bf/c6a616] Submitted process > parseGaps ()
-Nov-20 11:32:35.029 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
-Nov-20 11:32:35.030 [Task submitter] INFO  nextflow.Session - [76/632686] Submitted process > parseGaps ()
-Nov-20 11:32:35.037 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
-Nov-20 11:32:35.039 [Task submitter] INFO  nextflow.Session - [ae/f5c3aa] Submitted process > parseGaps ()
-Nov-20 11:32:35.046 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
-Nov-20 11:32:35.047 [Task submitter] INFO  nextflow.Session - [b0/2797df] Submitted process > parseGaps ()
-Nov-20 11:32:35.053 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
-Nov-20 11:32:35.054 [Task submitter] INFO  nextflow.Session - [c7/f84355] Submitted process > parseGaps ()
-Nov-20 11:32:35.059 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
-Nov-20 11:32:35.060 [Task submitter] INFO  nextflow.Session - [88/56ad26] Submitted process > parseGaps ()
-Nov-20 11:32:35.066 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
-Nov-20 11:32:35.066 [Task submitter] INFO  nextflow.Session - [63/7e8278] Submitted process > parseGaps ()
-Nov-20 11:32:35.074 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 5; name: parseGaps (); status: COMPLETED; exit: 0; error: -; workDir: /home/edgar/CBCRG/msa_gap_format/work/ae/f5c3aac4079deeb4b15c8910efef26]
-Nov-20 11:32:35.098 [Task monitor] DEBUG n.util.BlockingThreadExecutorFactory - Thread pool name=FileTransfer; maxThreads=36; maxQueueSize=108; keepAlive=1m
-Nov-20 11:32:35.161 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 1; name: parseGaps (); status: COMPLETED; exit: 0; error: -; workDir: /home/edgar/CBCRG/msa_gap_format/work/63/7e82786a3cac262a1fe052477f435f]
-Nov-20 11:32:35.198 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 7; name: parseGaps (); status: COMPLETED; exit: 0; error: -; workDir: /home/edgar/CBCRG/msa_gap_format/work/76/632686a9ea3d389677ac73ea16808d]
-Nov-20 11:32:35.210 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 6; name: parseGaps (); status: COMPLETED; exit: 0; error: -; workDir: /home/edgar/CBCRG/msa_gap_format/work/c7/f8435595b59812457915fd97bdff47]
-Nov-20 11:32:35.243 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 2; name: parseGaps (); status: COMPLETED; exit: 0; error: -; workDir: /home/edgar/CBCRG/msa_gap_format/work/88/56ad262094b76352d3bbc185d29b38]
-Nov-20 11:32:35.343 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 4; name: parseGaps (); status: COMPLETED; exit: 0; error: -; workDir: /home/edgar/CBCRG/msa_gap_format/work/bf/c6a616056cc1a09fc3959a8b4a7933]
-Nov-20 11:32:35.406 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 3; name: parseGaps (); status: COMPLETED; exit: 0; error: -; workDir: /home/edgar/CBCRG/msa_gap_format/work/b0/2797df49b43e1bdf321267a0f62095]
-Nov-20 11:32:35.413 [main] DEBUG nextflow.Session - Session await > all process finished
-Nov-20 11:32:35.506 [main] DEBUG nextflow.Session - Session await > all barriers passed
-Nov-20 11:32:35.518 [main] DEBUG nextflow.trace.StatsObserver - Workflow completed > WorkflowStats[succeedCount=7; failedCount=0; ignoredCount=0; cachedCount=0; succeedDuration=928ms; failedDuration=0ms; cachedDuration=0ms]
-Nov-20 11:32:35.679 [main] DEBUG nextflow.CacheDB - Closing CacheDB done
-Nov-20 11:32:35.695 [main] DEBUG nextflow.script.ScriptRunner - > Execution complete -- Goodbye
+  Process: 19180@taiwan-big [127.0.1.1]
+  CPUs: 12 - Mem: 47.1 GB (19.2 GB) - Swap: 976 MB (26.9 MB)
+Nov-21 15:47:39.258 [main] DEBUG nextflow.Session - Work-dir: /home/edgar/CBCRG/msa_gap_format/work [ext2/ext3]
+Nov-21 15:47:39.290 [main] DEBUG nextflow.Session - Observer factory: TowerFactory
+Nov-21 15:47:39.293 [main] DEBUG nextflow.Session - Observer factory: DefaultObserverFactory
+Nov-21 15:47:39.620 [main] DEBUG nextflow.Session - Session start invoked
+Nov-21 15:47:40.322 [main] DEBUG nextflow.script.ScriptRunner - > Launching execution
+Nov-21 15:47:40.343 [main] INFO  nextflow.Nextflow - R E G R E S S I V E   M S A   A n a l y s i s  ~  version 0.1"
+======================================="
+Input Alignments (FA)                          : /home/edgar/CBCRG/msa_gap_format/data/test.fa
+Input Alignments (GAPS)                        : /home/edgar/CBCRG/msa_gap_format/data/test.gap   
+FA -->> GAP                                    : true  
+Output directory (DIRECTORY)                   : /home/edgar/CBCRG/msa_gap_format/results
+
+Nov-21 15:47:40.552 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Nov-21 15:47:40.552 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Nov-21 15:47:40.559 [main] DEBUG nextflow.executor.Executor - [warm up] executor > local
+Nov-21 15:47:40.566 [main] DEBUG n.processor.LocalPollingMonitor - Creating local task monitor for executor 'local' > cpus=12; memory=47.1 GB; capacity=12; pollInterval=100ms; dumpInterval=5m
+Nov-21 15:47:40.651 [main] DEBUG nextflow.processor.TaskProcessor - Creating operator > fasta2Gap -- maxForks: 12
+Nov-21 15:47:40.678 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Nov-21 15:47:40.678 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Nov-21 15:47:40.679 [main] DEBUG nextflow.processor.TaskProcessor - Creating operator > gap2Fasta -- maxForks: 12
+Nov-21 15:47:40.682 [main] DEBUG nextflow.script.BaseScript - No entry workflow defined
+Nov-21 15:47:40.683 [main] DEBUG nextflow.script.ScriptRunner - > Await termination 
+Nov-21 15:47:40.683 [main] DEBUG nextflow.Session - Session await
+Nov-21 15:47:40.855 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Nov-21 15:47:40.861 [Task submitter] INFO  nextflow.Session - [39/cd0be3] Submitted process > fasta2Gap ()
+Nov-21 15:47:40.890 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 1; name: fasta2Gap (); status: COMPLETED; exit: 0; error: -; workDir: /home/edgar/CBCRG/msa_gap_format/work/39/cd0be3c7c5db80268828af0c4775db]
+Nov-21 15:47:40.911 [Task monitor] DEBUG n.util.BlockingThreadExecutorFactory - Thread pool name=FileTransfer; maxThreads=36; maxQueueSize=108; keepAlive=1m
+Nov-21 15:47:40.917 [main] DEBUG nextflow.Session - Session await > all process finished
+Nov-21 15:47:40.919 [main] DEBUG nextflow.Session - Session await > all barriers passed
+Nov-21 15:47:40.927 [main] DEBUG nextflow.trace.StatsObserver - Workflow completed > WorkflowStats[succeedCount=1; failedCount=0; ignoredCount=0; cachedCount=0; succeedDuration=5ms; failedDuration=0ms; cachedDuration=0ms]
+Nov-21 15:47:41.057 [main] DEBUG nextflow.CacheDB - Closing CacheDB done
+Nov-21 15:47:41.081 [main] DEBUG nextflow.script.ScriptRunner - > Execution complete -- Goodbye
