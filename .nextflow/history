@@ -55,3 +55,7 @@
 2019-11-21 15:46:25	2.2s	nice_ardinghelli	OK	19fff06fd5c6b3a8a8095635f09b7a41	7eb6a106-0f30-4045-93ba-bdd14375a795	nextflow run main.nf
 2019-11-21 15:46:59	2.5s	golden_hawking	OK	da49fb307478eca89112ef8ab39cfa13	e1a14bf9-01b4-41d4-a0f6-eb3c1b209162	nextflow run main.nf
 2019-11-21 15:47:39	2.1s	goofy_shannon	OK	da49fb307478eca89112ef8ab39cfa13	6658758c-20e1-416b-a8f8-59c503e03315	nextflow run main.nf --fa2gap true
+2019-11-22 09:29:18	-	curious_perlman	-	6a6aa3461178ab2f8dcb577d2e0354ca	0965b66f-2853-42ad-aa15-05f10fef73fc	nextflow run main.nf -with-tower
+2019-11-22 09:30:16	55m 17s	chaotic_gilbert	OK	6a6aa3461178ab2f8dcb577d2e0354ca	067d43c8-0050-4329-bad9-2092d9ece785	nextflow run main.nf -with-tower
+2019-11-22 12:18:06	6m 28s	nauseous_visvesvaraya	ERR	60373b3a967cba1021214dda630984e1	c29de95d-491d-4b94-a9a7-e797e351960d	nextflow run main.nf -with-tower
+2019-11-22 12:25:48	54m 8s	fervent_bhaskara	OK	57c3780f3e5e56318973e4cf938add77	f7780023-6333-4d20-9210-86119ff76371	nextflow run main.nf -with-tower

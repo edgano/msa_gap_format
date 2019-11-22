@@ -1,13 +1,13 @@
 #!/usr/bin/env nextflow
 
-params.fasta = "${baseDir}/data/test.fa"
+//params.fasta = "${baseDir}/data/test.fa"
 //params.fasta = "${baseDir}/results/alignments/*.dpa_1000.*.tree.aln"
-//params.fasta = "/users/cn/efloden/projects/dpa-benchfam-100k/results/alignments/*.dpa_1000.*.tree.aln"
-params.gaps = "${baseDir}/data/test.gap"
+params.fasta = "/users/cn/efloden/projects/dpa-benchfam-100k/results/alignments/*.dpa_1000.*.tree.aln"
+params.gaps = "${baseDir}/results/benchfam/gap/PF00005.dpa_1000.CLUSTALO.with.MAFFT_PARTTREE.tree_F2G.gap"
 
 params.fa2gap = false
 
-params.output = "${baseDir}/results"
+params.output = "${baseDir}/results/benchfam"
 
 
 log.info """\
@@ -38,7 +38,7 @@ if ( params.gaps ) {
 }
 
 process fasta2Gap {
-    tag ""
+    tag "${id}"
     publishDir "${params.output}/gap", mode: 'copy', overwrite: true
 
     input:
@@ -57,7 +57,7 @@ process fasta2Gap {
     """
 }
 process gap2Fasta {
-    tag ""
+    tag "${id}"
     publishDir "${params.output}/fa", mode: 'copy', overwrite: true
 
     input:

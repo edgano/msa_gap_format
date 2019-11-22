@@ -1,47 +1,92 @@
-Nov-21 15:47:38.793 [main] DEBUG nextflow.cli.Launcher - $> nextflow run main.nf --fa2gap true
-Nov-21 15:47:38.999 [main] INFO  nextflow.cli.CmdRun - N E X T F L O W  ~  version 19.10.0
-Nov-21 15:47:39.017 [main] INFO  nextflow.cli.CmdRun - Launching `main.nf` [goofy_shannon] - revision: da49fb3074
-Nov-21 15:47:39.147 [main] DEBUG nextflow.extension.OperatorEx - Dataflow extension methods: branch,buffer,chain,choice,collate,collect,collectFile,combine,concat,count,countBy,countFasta,countFastq,countLines,countText,cross,distinct,filter,first,flatMap,flatten,fork,groupBy,groupTuple,ifEmpty,into,join,last,map,max,mean,merge,min,mix,phase,print,println,randomSample,reduce,separate,set,splitCsv,splitFasta,splitFastq,splitText,spread,subscribe,sum,take,tap,toDouble,toFloat,toInteger,toList,toLong,toSortedList,transpose,unique,until,view
-Nov-21 15:47:39.158 [main] DEBUG nextflow.Session - Session uuid: 6658758c-20e1-416b-a8f8-59c503e03315
-Nov-21 15:47:39.158 [main] DEBUG nextflow.Session - Run name: goofy_shannon
-Nov-21 15:47:39.160 [main] DEBUG nextflow.Session - Executor pool size: 12
-Nov-21 15:47:39.177 [main] DEBUG nextflow.cli.CmdRun - 
+Nov-22 12:25:46.817 [main] DEBUG nextflow.cli.Launcher - $> nextflow run main.nf -with-tower
+Nov-22 12:25:47.373 [main] INFO  nextflow.cli.CmdRun - N E X T F L O W  ~  version 19.10.0
+Nov-22 12:25:47.392 [main] INFO  nextflow.cli.CmdRun - Launching `main.nf` [fervent_bhaskara] - revision: 57c3780f3e
+Nov-22 12:25:47.426 [main] DEBUG nextflow.config.ConfigBuilder - Found config local: /nfs/users2/cn/egarriga/msa_gap_format/nextflow.config
+Nov-22 12:25:47.428 [main] DEBUG nextflow.config.ConfigBuilder - Parsing config file: /nfs/users2/cn/egarriga/msa_gap_format/nextflow.config
+Nov-22 12:25:47.464 [main] DEBUG nextflow.config.ConfigBuilder - Applying config profile: `standard`
+Nov-22 12:25:48.235 [main] DEBUG nextflow.extension.OperatorEx - Dataflow extension methods: branch,buffer,chain,choice,collate,collect,collectFile,combine,concat,count,countBy,countFasta,countFastq,countLines,countText,cross,distinct,filter,first,flatMap,flatten,fork,groupBy,groupTuple,ifEmpty,into,join,last,map,max,mean,merge,min,mix,phase,print,println,randomSample,reduce,separate,set,splitCsv,splitFasta,splitFastq,splitText,spread,subscribe,sum,take,tap,toDouble,toFloat,toInteger,toList,toLong,toSortedList,transpose,unique,until,view
+Nov-22 12:25:48.243 [main] DEBUG nextflow.Session - Session uuid: f7780023-6333-4d20-9210-86119ff76371
+Nov-22 12:25:48.244 [main] DEBUG nextflow.Session - Run name: fervent_bhaskara
+Nov-22 12:25:48.245 [main] DEBUG nextflow.Session - Executor pool size: 16
+Nov-22 12:25:48.258 [main] DEBUG nextflow.config.ConfigBuilder - Found config local: /nfs/users2/cn/egarriga/msa_gap_format/nextflow.config
+Nov-22 12:25:48.258 [main] DEBUG nextflow.config.ConfigBuilder - Parsing config file: /nfs/users2/cn/egarriga/msa_gap_format/nextflow.config
+Nov-22 12:25:48.258 [main] DEBUG nextflow.config.ConfigBuilder - Applying config profile: `standard`
+Nov-22 12:25:48.346 [main] DEBUG nextflow.cli.CmdRun - 
   Version: 19.10.0 build 5170
   Created: 21-10-2019 15:07 UTC (17:07 CEST)
-  System: Linux 4.15.0-70-generic
-  Runtime: Groovy 2.5.8 on Java HotSpot(TM) 64-Bit Server VM 1.8.0_231-b11
+  System: Linux 3.10.0-514.16.1.el7.x86_64
+  Runtime: Groovy 2.5.8 on Java HotSpot(TM) 64-Bit Server VM 1.8.0_92-b14
   Encoding: UTF-8 (UTF-8)
-  Process: 19180@taiwan-big [127.0.1.1]
-  CPUs: 12 - Mem: 47.1 GB (19.2 GB) - Swap: 976 MB (26.9 MB)
-Nov-21 15:47:39.258 [main] DEBUG nextflow.Session - Work-dir: /home/edgar/CBCRG/msa_gap_format/work [ext2/ext3]
-Nov-21 15:47:39.290 [main] DEBUG nextflow.Session - Observer factory: TowerFactory
-Nov-21 15:47:39.293 [main] DEBUG nextflow.Session - Observer factory: DefaultObserverFactory
-Nov-21 15:47:39.620 [main] DEBUG nextflow.Session - Session start invoked
-Nov-21 15:47:40.322 [main] DEBUG nextflow.script.ScriptRunner - > Launching execution
-Nov-21 15:47:40.343 [main] INFO  nextflow.Nextflow - R E G R E S S I V E   M S A   A n a l y s i s  ~  version 0.1"
+  Process: 35236@ant-login6.linux.crg.es [172.21.11.38]
+  CPUs: 16 - Mem: 125.7 GB (420 MB) - Swap: 32 GB (31.6 GB)
+Nov-22 12:25:48.491 [main] DEBUG nextflow.Session - Work-dir: /nfs/users2/cn/egarriga/msa_gap_format/work [nfs]
+Nov-22 12:25:48.535 [main] DEBUG nextflow.Session - Observer factory: TowerFactory
+Nov-22 12:25:48.563 [main] DEBUG nextflow.Session - Observer factory: DefaultObserverFactory
+Nov-22 12:25:48.820 [main] DEBUG nextflow.Session - Session start invoked
+Nov-22 12:25:48.828 [main] DEBUG io.seqera.tower.plugin.TowerClient - Creating Tower observer -- endpoint=https://api.tower.nf; requestInterval=1s; aliveInterval=1m; maxRetries=5; backOffBase=3; backOffDelay=250
+Nov-22 12:25:49.789 [main] DEBUG nextflow.script.ScriptRunner - > Launching execution
+Nov-22 12:25:49.809 [main] INFO  nextflow.Nextflow - R E G R E S S I V E   M S A   A n a l y s i s  ~  version 0.1"
 ======================================="
-Input Alignments (FA)                          : /home/edgar/CBCRG/msa_gap_format/data/test.fa
-Input Alignments (GAPS)                        : /home/edgar/CBCRG/msa_gap_format/data/test.gap   
-FA -->> GAP                                    : true  
-Output directory (DIRECTORY)                   : /home/edgar/CBCRG/msa_gap_format/results
+Input Alignments (FA)                          : /users/cn/efloden/projects/dpa-benchfam-100k/results/alignments/*.dpa_1000.*.tree.aln
+Input Alignments (GAPS)                        : /nfs/users2/cn/egarriga/msa_gap_format/results/benchfam/gap/PF00005.dpa_1000.CLUSTALO.with.MAFFT_PARTTREE.tree_F2G.gap   
+FA -->> GAP                                    : false  
+Output directory (DIRECTORY)                   : /nfs/users2/cn/egarriga/msa_gap_format/results/benchfam
 
-Nov-21 15:47:40.552 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
-Nov-21 15:47:40.552 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
-Nov-21 15:47:40.559 [main] DEBUG nextflow.executor.Executor - [warm up] executor > local
-Nov-21 15:47:40.566 [main] DEBUG n.processor.LocalPollingMonitor - Creating local task monitor for executor 'local' > cpus=12; memory=47.1 GB; capacity=12; pollInterval=100ms; dumpInterval=5m
-Nov-21 15:47:40.651 [main] DEBUG nextflow.processor.TaskProcessor - Creating operator > fasta2Gap -- maxForks: 12
-Nov-21 15:47:40.678 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
-Nov-21 15:47:40.678 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
-Nov-21 15:47:40.679 [main] DEBUG nextflow.processor.TaskProcessor - Creating operator > gap2Fasta -- maxForks: 12
-Nov-21 15:47:40.682 [main] DEBUG nextflow.script.BaseScript - No entry workflow defined
-Nov-21 15:47:40.683 [main] DEBUG nextflow.script.ScriptRunner - > Await termination 
-Nov-21 15:47:40.683 [main] DEBUG nextflow.Session - Session await
-Nov-21 15:47:40.855 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
-Nov-21 15:47:40.861 [Task submitter] INFO  nextflow.Session - [39/cd0be3] Submitted process > fasta2Gap ()
-Nov-21 15:47:40.890 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 1; name: fasta2Gap (); status: COMPLETED; exit: 0; error: -; workDir: /home/edgar/CBCRG/msa_gap_format/work/39/cd0be3c7c5db80268828af0c4775db]
-Nov-21 15:47:40.911 [Task monitor] DEBUG n.util.BlockingThreadExecutorFactory - Thread pool name=FileTransfer; maxThreads=36; maxQueueSize=108; keepAlive=1m
-Nov-21 15:47:40.917 [main] DEBUG nextflow.Session - Session await > all process finished
-Nov-21 15:47:40.919 [main] DEBUG nextflow.Session - Session await > all barriers passed
-Nov-21 15:47:40.927 [main] DEBUG nextflow.trace.StatsObserver - Workflow completed > WorkflowStats[succeedCount=1; failedCount=0; ignoredCount=0; cachedCount=0; succeedDuration=5ms; failedDuration=0ms; cachedDuration=0ms]
-Nov-21 15:47:41.057 [main] DEBUG nextflow.CacheDB - Closing CacheDB done
-Nov-21 15:47:41.081 [main] DEBUG nextflow.script.ScriptRunner - > Execution complete -- Goodbye
+Nov-22 12:25:49.856 [PathVisitor-1] DEBUG nextflow.file.PathVisitor - files for syntax: glob; folder: /users/cn/efloden/projects/dpa-benchfam-100k/results/alignments/; pattern: *.dpa_1000.*.tree.aln; options: [:]
+Nov-22 12:25:50.478 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: crg
+Nov-22 12:25:50.479 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'crg'
+Nov-22 12:25:50.496 [main] DEBUG nextflow.executor.Executor - [warm up] executor > crg
+Nov-22 12:25:50.502 [main] DEBUG n.processor.TaskPollingMonitor - Creating task monitor for executor 'crg' > capacity: 100; pollInterval: 5s; dumpInterval: 5m 
+Nov-22 12:25:50.508 [main] DEBUG n.executor.AbstractGridExecutor - Creating executor 'crg' > queue-stat-interval: 1m
+Nov-22 12:25:50.572 [main] DEBUG nextflow.processor.TaskProcessor - Creating operator > fasta2Gap -- maxForks: 16
+Nov-22 12:25:50.612 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: crg
+Nov-22 12:25:50.612 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'crg'
+Nov-22 12:25:50.617 [main] DEBUG nextflow.processor.TaskProcessor - Creating operator > gap2Fasta -- maxForks: 16
+Nov-22 12:25:50.620 [main] DEBUG nextflow.script.BaseScript - No entry workflow defined
+Nov-22 12:25:50.780 [main] INFO  io.seqera.tower.plugin.TowerClient - Monitor the execution with Nextflow Tower using this url https://tower.nf/watch/2QoG57QG
+Nov-22 12:25:50.782 [main] DEBUG nextflow.script.ScriptRunner - > Await termination 
+Nov-22 12:25:50.790 [main] DEBUG nextflow.Session - Session await
+Nov-22 12:25:51.458 [Task submitter] DEBUG nextflow.executor.GridTaskHandler - [CRG] submitted process gap2Fasta (PF00005.dpa_1000.CLUSTALO.with.MAFFT_PARTTREE.tree_F2G) > jobId: 31798682; workDir: /nfs/users2/cn/egarriga/msa_gap_format/work/2e/c4e7caaa5191e2bfb12bd052c7e074
+Nov-22 12:25:51.465 [Task submitter] INFO  nextflow.Session - [2e/c4e7ca] Submitted process > gap2Fasta (PF00005.dpa_1000.CLUSTALO.with.MAFFT_PARTTREE.tree_F2G)
+Nov-22 12:30:55.538 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor crg > tasks to be completed: 1 -- pending tasks are shown below
+~> TaskHandler[jobId: 31798682; id: 17; name: gap2Fasta (PF00005.dpa_1000.CLUSTALO.with.MAFFT_PARTTREE.tree_F2G); status: RUNNING; exit: -; error: -; workDir: /nfs/users2/cn/egarriga/msa_gap_format/work/2e/c4e7caaa5191e2bfb12bd052c7e074 started: 1574421985530; exited: -; ]
+Nov-22 12:35:55.556 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor crg > tasks to be completed: 1 -- pending tasks are shown below
+~> TaskHandler[jobId: 31798682; id: 17; name: gap2Fasta (PF00005.dpa_1000.CLUSTALO.with.MAFFT_PARTTREE.tree_F2G); status: RUNNING; exit: -; error: -; workDir: /nfs/users2/cn/egarriga/msa_gap_format/work/2e/c4e7caaa5191e2bfb12bd052c7e074 started: 1574421985530; exited: -; ]
+Nov-22 12:40:55.572 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor crg > tasks to be completed: 1 -- pending tasks are shown below
+~> TaskHandler[jobId: 31798682; id: 17; name: gap2Fasta (PF00005.dpa_1000.CLUSTALO.with.MAFFT_PARTTREE.tree_F2G); status: RUNNING; exit: -; error: -; workDir: /nfs/users2/cn/egarriga/msa_gap_format/work/2e/c4e7caaa5191e2bfb12bd052c7e074 started: 1574421985530; exited: -; ]
+Nov-22 12:45:55.582 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor crg > tasks to be completed: 1 -- pending tasks are shown below
+~> TaskHandler[jobId: 31798682; id: 17; name: gap2Fasta (PF00005.dpa_1000.CLUSTALO.with.MAFFT_PARTTREE.tree_F2G); status: RUNNING; exit: -; error: -; workDir: /nfs/users2/cn/egarriga/msa_gap_format/work/2e/c4e7caaa5191e2bfb12bd052c7e074 started: 1574421985530; exited: -; ]
+Nov-22 12:50:55.604 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor crg > tasks to be completed: 1 -- pending tasks are shown below
+~> TaskHandler[jobId: 31798682; id: 17; name: gap2Fasta (PF00005.dpa_1000.CLUSTALO.with.MAFFT_PARTTREE.tree_F2G); status: RUNNING; exit: -; error: -; workDir: /nfs/users2/cn/egarriga/msa_gap_format/work/2e/c4e7caaa5191e2bfb12bd052c7e074 started: 1574421985530; exited: -; ]
+Nov-22 12:55:05.630 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[jobId: 31798682; id: 17; name: gap2Fasta (PF00005.dpa_1000.CLUSTALO.with.MAFFT_PARTTREE.tree_F2G); status: COMPLETED; exit: 0; error: -; workDir: /nfs/users2/cn/egarriga/msa_gap_format/work/2e/c4e7caaa5191e2bfb12bd052c7e074 started: 1574421985530; exited: 2019-11-22T11:53:20Z; ]
+Nov-22 12:55:05.711 [Task monitor] DEBUG n.util.BlockingThreadExecutorFactory - Thread pool name=FileTransfer; maxThreads=48; maxQueueSize=144; keepAlive=1m
+Nov-22 12:55:05.754 [main] DEBUG nextflow.Session - Session await > all process finished
+Nov-22 12:55:05.803 [main] DEBUG nextflow.Session - Session await > all barriers passed
+Nov-22 12:55:10.896 [main] INFO  nextflow.Session - Waiting files transfer to complete (1 files)
+Nov-22 12:56:10.901 [main] DEBUG nextflow.Session - Waiting files transfer to complete (1 files)
+Nov-22 12:57:10.905 [main] DEBUG nextflow.Session - Waiting files transfer to complete (1 files)
+Nov-22 12:58:10.932 [main] DEBUG nextflow.Session - Waiting files transfer to complete (1 files)
+Nov-22 12:59:10.947 [main] DEBUG nextflow.Session - Waiting files transfer to complete (1 files)
+Nov-22 13:00:10.966 [main] DEBUG nextflow.Session - Waiting files transfer to complete (1 files)
+Nov-22 13:01:11.103 [main] DEBUG nextflow.Session - Waiting files transfer to complete (1 files)
+Nov-22 13:02:11.132 [main] DEBUG nextflow.Session - Waiting files transfer to complete (1 files)
+Nov-22 13:03:11.150 [main] DEBUG nextflow.Session - Waiting files transfer to complete (1 files)
+Nov-22 13:04:11.153 [main] DEBUG nextflow.Session - Waiting files transfer to complete (1 files)
+Nov-22 13:05:11.156 [main] INFO  nextflow.Session - Waiting files transfer to complete (1 files)
+Nov-22 13:06:11.159 [main] DEBUG nextflow.Session - Waiting files transfer to complete (1 files)
+Nov-22 13:07:11.163 [main] DEBUG nextflow.Session - Waiting files transfer to complete (1 files)
+Nov-22 13:08:11.166 [main] DEBUG nextflow.Session - Waiting files transfer to complete (1 files)
+Nov-22 13:09:11.213 [main] DEBUG nextflow.Session - Waiting files transfer to complete (1 files)
+Nov-22 13:10:11.216 [main] DEBUG nextflow.Session - Waiting files transfer to complete (1 files)
+Nov-22 13:11:11.219 [main] DEBUG nextflow.Session - Waiting files transfer to complete (1 files)
+Nov-22 13:12:11.221 [main] DEBUG nextflow.Session - Waiting files transfer to complete (1 files)
+Nov-22 13:13:11.233 [main] DEBUG nextflow.Session - Waiting files transfer to complete (1 files)
+Nov-22 13:14:11.237 [main] DEBUG nextflow.Session - Waiting files transfer to complete (1 files)
+Nov-22 13:15:11.240 [main] INFO  nextflow.Session - Waiting files transfer to complete (1 files)
+Nov-22 13:16:11.243 [main] DEBUG nextflow.Session - Waiting files transfer to complete (1 files)
+Nov-22 13:17:11.246 [main] DEBUG nextflow.Session - Waiting files transfer to complete (1 files)
+Nov-22 13:18:11.249 [main] DEBUG nextflow.Session - Waiting files transfer to complete (1 files)
+Nov-22 13:19:11.252 [main] DEBUG nextflow.Session - Waiting files transfer to complete (1 files)
+Nov-22 13:19:54.954 [main] DEBUG nextflow.trace.StatsObserver - Workflow completed > WorkflowStats[succeedCount=1; failedCount=0; ignoredCount=0; cachedCount=0; succeedDuration=28m 43s; failedDuration=0ms; cachedDuration=0ms]
+Nov-22 13:19:55.815 [main] DEBUG nextflow.CacheDB - Closing CacheDB done
+Nov-22 13:19:55.889 [main] DEBUG nextflow.script.ScriptRunner - > Execution complete -- Goodbye
